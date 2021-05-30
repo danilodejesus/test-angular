@@ -23,6 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'test-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
+    console.log(app)
     expect(app.title).toEqual('test-angular');
   });
 
@@ -30,6 +31,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('test-angular app is running!');
+    console.log(compiled)
+    expect(compiled.querySelector('.d-flex h1').textContent).toContain('Listado Test Alicorp');
   });
 });
